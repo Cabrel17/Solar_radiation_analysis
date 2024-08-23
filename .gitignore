@@ -1,0 +1,24 @@
+# irtual environments
+venv/
+env/
+
+# Cache python repertory
+__pycache__/
+*.py[cod]
+
+# VSCode configuration
+.vscode/
+.idea/
+
+# log files
+*.log
+
+# Temporal datasets or big datasets
+data/*.csv
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Specific systems files
+.DS_Store
+Thumbs.db
