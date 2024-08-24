@@ -24,3 +24,20 @@ def outliers(df, colname):
     outliers = df[colname][((df[colname] < (Q1 - 1.5 * IQR)) | (df[colname] > (Q3 + 1.5 * IQR)))]
 
     return outliers
+
+
+def missing_values(df, col):
+    """
+    This function returns the number of missing values within a variable
+    """
+    A = df[col].isna().sum() # number of missing values within of a column
+    B = A/df[col].shape[0] # percentage of missing values within of a column
+    return A, B
+
+
+def neg_values(df, col):
+    """
+    This functions returns a list serie of negative values within the dataset
+    """
+    neg = df[col][df[col] < 0]
+    return neg
